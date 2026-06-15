@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo Bantos Capoeira | Nossos Registros</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --verde: #009B3A;
+    --amarelo: #FFDF00;
+    --azul: #002776;
+    --branco: #FFFFFF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat', sans-serif;
+}
+
+body{
+    background: var(--branco);
+    color: var(--azul);
+}
+
+header{
+    background: linear-gradient(135deg, var(--verde), var(--azul));
+    color: var(--branco);
+    text-align:center;
+    padding:50px 20px;
+}
+
+.logo{
+    width:180px;
+    height:180px;
+    object-fit:contain;
+    background:var(--branco);
+    border-radius:50%;
+    padding:8px;
+    border:6px solid var(--amarelo);
+}
+
+header h1{
+    margin-top:20px;
+    font-size:2.6rem;
+    font-weight:800;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+    letter-spacing:2px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+.section-title{
+    color:var(--verde);
+    font-size:2rem;
+    margin-bottom:25px;
+    border-left:8px solid var(--amarelo);
+    padding-left:15px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--branco);
+    border:2px solid var(--verde);
+    border-top:8px solid var(--amarelo);
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:var(--azul);
+    margin-bottom:15px;
+}
+
+.card a{
+    display:block;
+    padding:12px 0;
+    text-decoration:none;
+    color:var(--azul);
+    border-bottom:1px solid var(--amarelo);
+    transition:.3s;
+}
+
+.card a:hover{
+    color:var(--verde);
+    padding-left:8px;
+}
+
+.youtube{
+    border-top:8px solid var(--azul);
+}
+
+footer{
+    background:var(--verde);
+    color:var(--branco);
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+footer span{
+    color:var(--amarelo);
+    font-weight:700;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2rem;
+    }
+
+    .logo{
+        width:140px;
+        height:140px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+
+    <!-- Coloque sua imagem na mesma pasta do HTML -->
+    <img src="logo.png" alt="Grupo Bantos Capoeira" class="logo">
+
+    <h1>GRUPO BANTOS CAPOEIRA</h1>
+    <p>#Nossos Registros</p>
+
+</header>
+
+<div class="container">
+
+    <h2 class="section-title">📁 Acervo Digital</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Google Drive</h3>
+
+            <a href="https://drive.google.com/drive/folders/1A4wqjdXtseM5fPxaEXlaF-Ty1p47QToh" target="_blank">
+                Abrir Acervo Digital
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Redes Sociais</h3>
+
+            <a href="https://www.instagram.com/bantoscap/" target="_blank">
+                Instagram Oficial
+            </a>
+
+            <a href="https://www.facebook.com/p/Amigos-da-Capoeira-Laranjal-do-Jari-Ap-100067032506517/" target="_blank">
+                Facebook
+            </a>
+
+            <a href="https://www.instagram.com/contramestre_anderson/" target="_blank">
+                Contramestre Anderson
+            </a>
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <h2 class="section-title">🎥 Vídeos Históricos</h2>
+
+    <div class="grid">
+
+        <div class="card youtube">
+            <h3>Capoeira Movimentos 2009</h3>
+
+            <a href="https://www.youtube.com/watch?v=IDMVBa6zTm8" target="_blank">
+                Assistir vídeo
+            </a>
+        </div>
+
+        <div class="card youtube">
+            <h3>Apresentação Escola Sonia Heriques 2021</h3>
+
+            <a href="https://www.youtube.com/watch?v=x7QP0tZ3nFI" target="_blank">
+                Assistir vídeo
+            </a>
+        </div>
+
+        <div class="card youtube">
+            <h3>Roda de Capoeira 2014</h3>
+
+            <a href="https://www.youtube.com/watch?v=ch9vC2cJKsQ" target="_blank">
+                Assistir vídeo
+            </a>
+        </div>
+
+        <div class="card youtube">
+            <h3>Consciência Negra</h3>
+
+            <a href="https://www.youtube.com/watch?v=VP--x4lx3cE&t=313s" target="_blank">
+                Escola Raimunda Capiberibe
+            </a>
+        </div>
+
+        <div class="card youtube">
+            <h3>Trecho Encontro Internacional</h3>
+
+            <a href="https://www.youtube.com/watch?v=rHy0Nqd8QC4" target="_blank">
+                Vídeo 1
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=9U3oHlhSpQI" target="_blank">
+                Vídeo 2
+            </a>
+        </div>
+
+        <div class="card youtube">
+            <h3>Registros Antigos</h3>
+
+            <a href="https://www.youtube.com/@tvbantos" target="_blank">
+                TV Bantos
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <strong>Grupo <span>Bantos Capoeira</span></strong><br>
+    Preservando a cultura, história e tradição da capoeira em Laranjal do Jari.
+</footer>
+
+</body>
+</html>
