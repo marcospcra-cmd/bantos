@@ -3,251 +3,846 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo Bantos Capoeira | Nossos Registros</title>
+
+<title>Grupo Bantos Capoeira — Nossos Registros</title>
+
+<meta name="description"
+content="Acervo histórico e cultural do Grupo Bantos Capoeira - Laranjal do Jari/AP">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
-    --verde: #009B3A;
-    --amarelo: #FFDF00;
-    --azul: #002776;
-    --branco: #FFFFFF;
-}
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Montserrat', sans-serif;
+}
+
+:root{
+    --green:#006E2C;
+    --green-dark:#004A1C;
+    --gold:#F5C800;
+    --gold-light:#FFE45A;
+    --blue:#003B8E;
+    --white:#FFFFFF;
+    --light:#F8FBF8;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background: var(--branco);
-    color: var(--azul);
+    font-family:'Inter',sans-serif;
+    background:var(--white);
+    color:var(--blue);
+    overflow-x:hidden;
 }
 
-header{
-    background: linear-gradient(135deg, var(--verde), var(--azul));
-    color: var(--branco);
-    text-align:center;
-    padding:50px 20px;
-}
-
-.logo{
-    width:180px;
-    height:180px;
-    object-fit:contain;
-    background:var(--branco);
-    border-radius:50%;
-    padding:8px;
-    border:6px solid var(--amarelo);
-}
-
-header h1{
-    margin-top:20px;
-    font-size:2.6rem;
-    font-weight:800;
-}
-
-header p{
-    margin-top:10px;
-    font-size:1.1rem;
-    letter-spacing:2px;
+a{
+    text-decoration:none;
 }
 
 .container{
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
-    padding:50px 20px;
+    padding:0 20px;
 }
 
-.section-title{
-    color:var(--verde);
-    font-size:2rem;
-    margin-bottom:25px;
-    border-left:8px solid var(--amarelo);
-    padding-left:15px;
-}
+/* HERO */
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
+.hero{
+    position:relative;
+    overflow:hidden;
 
-.card{
-    background:var(--branco);
-    border:2px solid var(--verde);
-    border-top:8px solid var(--amarelo);
-    border-radius:20px;
-    padding:25px;
-    transition:.3s;
-}
+    background:
+    radial-gradient(circle at top right,
+        rgba(245,200,0,.15),
+        transparent 30%),
 
-.card:hover{
-    transform:translateY(-5px);
-}
+    radial-gradient(circle at bottom left,
+        rgba(0,110,44,.08),
+        transparent 40%),
 
-.card h3{
-    color:var(--azul);
-    margin-bottom:15px;
-}
+    linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f7fff8 45%,
+        #eef6ff 100%
+    );
 
-.card a{
-    display:block;
-    padding:12px 0;
-    text-decoration:none;
-    color:var(--azul);
-    border-bottom:1px solid var(--amarelo);
-    transition:.3s;
-}
-
-.card a:hover{
-    color:var(--verde);
-    padding-left:8px;
-}
-
-.youtube{
-    border-top:8px solid var(--azul);
-}
-
-footer{
-    background:var(--verde);
-    color:var(--branco);
+    padding:80px 20px;
     text-align:center;
-    padding:30px;
-    margin-top:50px;
 }
 
-footer span{
-    color:var(--amarelo);
+.hero::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(245,200,0,.08);
+    top:-120px;
+    right:-120px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(0,110,44,.06);
+    bottom:-150px;
+    left:-120px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-logo{
+    width:min(240px,55vw);
+    display:block;
+    margin:auto;
+
+    filter:
+        drop-shadow(0 0 20px rgba(245,200,0,.35))
+        drop-shadow(0 0 50px rgba(0,110,44,.15));
+
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.hero-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(3rem,8vw,6rem);
+    letter-spacing:.08em;
+    margin-top:25px;
+    color:var(--green);
+}
+
+.hero-title span{
+    color:var(--gold);
+}
+
+.hero-sub{
+    color:var(--blue);
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    margin-top:10px;
+}
+
+.hero-quote{
+    margin-top:20px;
+    color:var(--green);
+    font-weight:600;
+    letter-spacing:.15em;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:30px;
+
+    background:linear-gradient(
+        135deg,
+        var(--green),
+        var(--blue)
+    );
+
+    color:white;
+    padding:14px 30px;
+    border-radius:50px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+.section-label{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:55px 0 25px;
+}
+
+.icon{
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:3px solid var(--gold);
+}
+
+.section-label h2{
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:.1em;
+    color:var(--green);
+    font-size:2rem;
+}
+
+.section-label p{
+    color:var(--blue);
+    font-size:.85rem;
+}
+
+.about{
+    max-width:800px;
+    margin:70px auto;
+    text-align:center;
+    line-height:1.9;
+}
+
+.about h2{
+    font-family:'Bebas Neue';
+    color:var(--green);
+    font-size:2.2rem;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:var(--blue);
+}
+
+/* CARDS */
+
+.link-card,
+.channel-card{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    padding:18px 20px;
+
+    background:white;
+
+    border-radius:14px;
+
+    border:1px solid rgba(0,110,44,.12);
+
+    box-shadow:
+        0 10px 25px rgba(0,110,44,.06);
+
+    margin-bottom:14px;
+
+    color:var(--blue);
+
+    transition:.25s;
+}
+
+.link-card:hover,
+.channel-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(0,110,44,.10);
+}
+
+.lc-icon,
+.channel-icon{
+    width:50px;
+    height:50px;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-size:1.3rem;
+}
+
+.drive{background:var(--green);}
+.insta{background:#833AB4;}
+.face{background:var(--blue);}
+.youtube{background:#FF0000;}
+
+.lc-name{
     font-weight:700;
 }
 
-@media(max-width:768px){
-    header h1{
-        font-size:2rem;
+.lc-url{
+    font-size:.8rem;
+    opacity:.7;
+}
+
+.lc-arrow{
+    margin-left:auto;
+    color:var(--gold);
+    font-size:1.5rem;
+}
+
+.chain-divider{
+    margin:30px 0;
+    height:2px;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            var(--gold) 0 10px,
+            transparent 10px 20px
+        );
+    opacity:.4;
+}
+
+.yt-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+.yt-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+
+    border:1px solid rgba(0,110,44,.12);
+
+    box-shadow:
+        0 10px 25px rgba(0,110,44,.06);
+
+    transition:.3s;
+
+    color:var(--blue);
+}
+
+.yt-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(0,110,44,.12);
+}
+
+.yt-thumb{
+    position:relative;
+    aspect-ratio:16/9;
+    overflow:hidden;
+}
+
+.yt-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.35s;
+}
+
+.yt-card:hover img{
+    transform:scale(1.05);
+}
+
+.yt-play{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(0,0,0,.18);
+}
+
+.yt-play-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+
+    background:#FF0000;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-size:1.5rem;
+}
+
+.yt-info{
+    padding:18px;
+}
+
+.yt-title{
+    font-weight:700;
+    line-height:1.4;
+}
+
+.yt-year{
+    margin-top:8px;
+    color:var(--gold);
+    font-size:.8rem;
+    font-weight:700;
+}
+
+.channel-icon{
+    background:#FF0000;
+}
+
+footer{
+    margin-top:70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--blue)
+        );
+
+    color:white;
+
+    text-align:center;
+
+    padding:45px 20px;
+}
+
+footer strong{
+    color:var(--gold);
+}
+
+.back-top{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--green-dark);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.5rem;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.15);
+
+    z-index:999;
+}
+
+@media(max-width:700px){
+
+    .hero{
+        padding:60px 20px;
     }
 
-    .logo{
-        width:140px;
-        height:140px;
+    .hero-title{
+        font-size:3rem;
     }
+
+    .section-label{
+        align-items:flex-start;
+    }
+
 }
+
 </style>
 </head>
+
 <body>
 
-<header>
+<header class="hero">
 
-    <!-- Coloque sua imagem na mesma pasta do HTML -->
-    <img src="logo.png" alt="Grupo Bantos Capoeira" class="logo">
+    <div class="hero-content">
 
-    <h1>GRUPO BANTOS CAPOEIRA</h1>
-    <p>#Nossos Registros</p>
+        <img src="logo.png"
+             alt="Grupo Bantos Capoeira"
+             class="hero-logo">
+
+        <h1 class="hero-title">
+            Grupo <span>Bantos</span> Capoeira
+        </h1>
+
+        <p class="hero-sub">
+            Nossos Registros · Laranjal do Jari
+        </p>
+
+        <p class="hero-quote">
+            TRADIÇÃO • CULTURA • RESISTÊNCIA
+        </p>
+
+        <a href="#conteudo"
+           class="hero-btn">
+            Explorar Acervo
+        </a>
+
+    </div>
 
 </header>
 
-<div class="container">
+<div class="container" id="conteudo">
 
-    <h2 class="section-title">📁 Acervo Digital</h2>
+<section class="about">
 
-    <div class="grid">
+    <h2>Sobre o Grupo</h2>
 
-        <div class="card">
-            <h3>Google Drive</h3>
+    <p>
+        O Grupo Bantos Capoeira atua na preservação da
+        cultura afro-brasileira em Laranjal do Jari,
+        promovendo educação, cidadania e transformação social
+        por meio da capoeira.
+    </p>
 
-            <a href="https://drive.google.com/drive/folders/1A4wqjdXtseM5fPxaEXlaF-Ty1p47QToh" target="_blank">
-                Abrir Acervo Digital
-            </a>
+</section>
+
+<div class="chain-divider"></div>
+
+<div class="section-label">
+    <div class="icon">☁️</div>
+
+    <div>
+        <h2>Google Drive</h2>
+        <p>Arquivos e registros do grupo</p>
+    </div>
+</div>
+
+<a href="https://drive.google.com/drive/folders/1A4wqjdXtseM5fPxaEXlaF-Ty1p47QToh"
+   target="_blank"
+   class="link-card">
+
+    <div class="lc-icon drive">📁</div>
+
+    <div>
+        <div class="lc-name">
+            Pasta Oficial do Grupo
         </div>
 
-        <div class="card">
-            <h3>Redes Sociais</h3>
-
-            <a href="https://www.instagram.com/bantoscap/" target="_blank">
-                Instagram Oficial
-            </a>
-
-            <a href="https://www.facebook.com/p/Amigos-da-Capoeira-Laranjal-do-Jari-Ap-100067032506517/" target="_blank">
-                Facebook
-            </a>
-
-            <a href="https://www.instagram.com/contramestre_anderson/" target="_blank">
-                Contramestre Anderson
-            </a>
+        <div class="lc-url">
+            Acervo Digital Bantos Capoeira
         </div>
-
     </div>
 
-    <br><br>
+    <span class="lc-arrow">→</span>
 
-    <h2 class="section-title">🎥 Vídeos Históricos</h2>
+</a>
 
-    <div class="grid">
+<div class="chain-divider"></div>
 
-        <div class="card youtube">
-            <h3>Capoeira Movimentos 2009</h3>
+<div class="section-label">
+    <div class="icon">📲</div>
 
-            <a href="https://www.youtube.com/watch?v=IDMVBa6zTm8" target="_blank">
-                Assistir vídeo
-            </a>
-        </div>
-
-        <div class="card youtube">
-            <h3>Apresentação Escola Sonia Heriques 2021</h3>
-
-            <a href="https://www.youtube.com/watch?v=x7QP0tZ3nFI" target="_blank">
-                Assistir vídeo
-            </a>
-        </div>
-
-        <div class="card youtube">
-            <h3>Roda de Capoeira 2014</h3>
-
-            <a href="https://www.youtube.com/watch?v=ch9vC2cJKsQ" target="_blank">
-                Assistir vídeo
-            </a>
-        </div>
-
-        <div class="card youtube">
-            <h3>Consciência Negra</h3>
-
-            <a href="https://www.youtube.com/watch?v=VP--x4lx3cE&t=313s" target="_blank">
-                Escola Raimunda Capiberibe
-            </a>
-        </div>
-
-        <div class="card youtube">
-            <h3>Trecho Encontro Internacional</h3>
-
-            <a href="https://www.youtube.com/watch?v=rHy0Nqd8QC4" target="_blank">
-                Vídeo 1
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=9U3oHlhSpQI" target="_blank">
-                Vídeo 2
-            </a>
-        </div>
-
-        <div class="card youtube">
-            <h3>Registros Antigos</h3>
-
-            <a href="https://www.youtube.com/@tvbantos" target="_blank">
-                TV Bantos
-            </a>
-        </div>
-
+    <div>
+        <h2>Redes Sociais</h2>
+        <p>Acompanhe nossas atividades</p>
     </div>
+</div>
+
+    <a href="https://www.instagram.com/bantoscap/"
+   target="_blank"
+   class="link-card">
+
+    <div class="lc-icon insta">📷</div>
+
+    <div>
+        <div class="lc-name">
+            @bantoscap
+        </div>
+
+        <div class="lc-url">
+            Instagram Oficial do Grupo
+        </div>
+    </div>
+
+    <span class="lc-arrow">→</span>
+
+</a>
+
+<a href="https://www.facebook.com/p/Amigos-da-Capoeira-Laranjal-do-Jari-Ap-100067032506517/"
+   target="_blank"
+   class="link-card">
+
+    <div class="lc-icon face">👥</div>
+
+    <div>
+        <div class="lc-name">
+            Amigos da Capoeira
+        </div>
+
+        <div class="lc-url">
+            Facebook Oficial
+        </div>
+    </div>
+
+    <span class="lc-arrow">→</span>
+
+</a>
+
+<a href="https://www.instagram.com/contramestre_anderson/"
+   target="_blank"
+   class="link-card">
+
+    <div class="lc-icon insta">🥋</div>
+
+    <div>
+        <div class="lc-name">
+            Contramestre Anderson
+        </div>
+
+        <div class="lc-url">
+            Instagram pessoal
+        </div>
+    </div>
+
+    <span class="lc-arrow">→</span>
+
+</a>
+
+<div class="chain-divider"></div>
+
+<div class="section-label">
+    <div class="icon">▶️</div>
+
+    <div>
+        <h2>Registros Históricos</h2>
+        <p>Vídeos e memórias do grupo</p>
+    </div>
+</div>
+
+<div class="yt-grid">
+
+    <!-- 2009 -->
+    <a href="https://www.youtube.com/watch?v=IDMVBa6zTm8"
+       target="_blank"
+       class="yt-card">
+
+        <div class="yt-thumb">
+            <img src="https://img.youtube.com/vi/IDMVBa6zTm8/mqdefault.jpg">
+
+            <div class="yt-play">
+                <div class="yt-play-btn">▶</div>
+            </div>
+        </div>
+
+        <div class="yt-info">
+            <div class="yt-title">
+                Capoeira Movimentos
+            </div>
+
+            <div class="yt-year">
+                2009
+            </div>
+        </div>
+
+    </a>
+
+    <!-- 2021 -->
+    <a href="https://www.youtube.com/watch?v=x7QP0tZ3nFI"
+       target="_blank"
+       class="yt-card">
+
+        <div class="yt-thumb">
+            <img src="https://img.youtube.com/vi/x7QP0tZ3nFI/mqdefault.jpg">
+
+            <div class="yt-play">
+                <div class="yt-play-btn">▶</div>
+            </div>
+        </div>
+
+        <div class="yt-info">
+            <div class="yt-title">
+                Apresentação Escola Sônia Henriques
+            </div>
+
+            <div class="yt-year">
+                2021
+            </div>
+        </div>
+
+    </a>
+
+    <!-- 2014 -->
+    <a href="https://www.youtube.com/watch?v=ch9vC2cJKsQ"
+       target="_blank"
+       class="yt-card">
+
+        <div class="yt-thumb">
+            <img src="https://img.youtube.com/vi/ch9vC2cJKsQ/mqdefault.jpg">
+
+            <div class="yt-play">
+                <div class="yt-play-btn">▶</div>
+            </div>
+        </div>
+
+        <div class="yt-info">
+            <div class="yt-title">
+                Roda de Capoeira
+            </div>
+
+            <div class="yt-year">
+                2014
+            </div>
+        </div>
+
+    </a>
+
+    <!-- Consciência Negra -->
+    <a href="https://www.youtube.com/watch?v=VP--x4lx3cE"
+       target="_blank"
+       class="yt-card">
+
+        <div class="yt-thumb">
+            <img src="https://img.youtube.com/vi/VP--x4lx3cE/mqdefault.jpg">
+
+            <div class="yt-play">
+                <div class="yt-play-btn">▶</div>
+            </div>
+        </div>
+
+        <div class="yt-info">
+            <div class="yt-title">
+                Consciência Negra
+            </div>
+
+            <div class="yt-year">
+                Registro Cultural
+            </div>
+        </div>
+
+    </a>
+
+    <!-- Encontro 1 -->
+    <a href="https://www.youtube.com/watch?v=rHy0Nqd8QC4"
+       target="_blank"
+       class="yt-card">
+
+        <div class="yt-thumb">
+            <img src="https://img.youtube.com/vi/rHy0Nqd8QC4/mqdefault.jpg">
+
+            <div class="yt-play">
+                <div class="yt-play-btn">▶</div>
+            </div>
+        </div>
+
+        <div class="yt-info">
+            <div class="yt-title">
+                Encontro Internacional - Parte 1
+            </div>
+
+            <div class="yt-year">
+                Registro
+            </div>
+        </div>
+
+    </a>
+
+    <!-- Encontro 2 -->
+    <a href="https://www.youtube.com/watch?v=9U3oHlhSpQI"
+       target="_blank"
+       class="yt-card">
+
+        <div class="yt-thumb">
+            <img src="https://img.youtube.com/vi/9U3oHlhSpQI/mqdefault.jpg">
+
+            <div class="yt-play">
+                <div class="yt-play-btn">▶</div>
+            </div>
+        </div>
+
+        <div class="yt-info">
+            <div class="yt-title">
+                Encontro Internacional - Parte 2
+            </div>
+
+            <div class="yt-year">
+                Registro
+            </div>
+        </div>
+
+    </a>
+
+</div>
+
+<div class="chain-divider"></div>
+
+<div class="section-label">
+    <div class="icon">📺</div>
+
+    <div>
+        <h2>TV Bantos</h2>
+        <p>Canal histórico do grupo</p>
+    </div>
+</div>
+
+<a href="https://www.youtube.com/@tvbantos"
+   target="_blank"
+   class="channel-card">
+
+    <div class="channel-icon">
+        ▶
+    </div>
+
+    <div>
+        <div class="lc-name">
+            TV Bantos
+        </div>
+
+        <div class="lc-url">
+            Registros históricos e eventos
+        </div>
+    </div>
+
+    <span class="lc-arrow">
+        →
+    </span>
+
+</a>
 
 </div>
 
 <footer>
-    <strong>Grupo <span>Bantos Capoeira</span></strong><br>
-    Preservando a cultura, história e tradição da capoeira em Laranjal do Jari.
+
+    <strong>
+        Grupo Bantos Capoeira
+    </strong>
+
+    <p style="margin-top:10px;">
+        Laranjal do Jari • Amapá • Brasil
+    </p>
+
+    <p style="margin-top:10px;">
+        Preservando a cultura, história e tradição da capoeira.
+    </p>
+
+    <p style="margin-top:15px;font-size:.8rem;">
+        © 2026 Grupo Bantos Capoeira
+    </p>
+
 </footer>
+
+<a href="#" class="back-top">
+    ↑
+</a>
 
 </body>
 </html>
+    
